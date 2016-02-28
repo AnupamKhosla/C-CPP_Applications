@@ -1,0 +1,47 @@
+#include<iostream>
+#include<conio.h>
+#include <stdlib.h>
+using namespace std;
+int x=0, y=0;
+
+int position()
+{
+	system("cls");
+	int j;
+	for(j=0; j<=y; j++)
+	{
+		cout<<"\n";
+	}	
+	
+	int k;
+	for(k=0; k<=x; k++)
+	{
+		cout<<" ";
+    }
+    cout<<".";
+}
+
+
+int main()
+{
+	
+	char dir;
+	
+	while(dir != '\r')
+  {
+		
+	
+	
+	dir = getch();
+	switch(dir)
+	{
+	  case 's': y++; position(); break;	
+	  case 'w': y--; position(); break; 
+	  case 'd': x++; position(); break;
+	  case 'a': x--; position(); break;
+	  case '\r': cout << "Exiting\n"; break;
+	  default: cout << "Try again";
+	  
+    }
+  }	
+}
